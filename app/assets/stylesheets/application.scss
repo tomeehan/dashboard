@@ -68,8 +68,8 @@ p.alert, p.notice {
 	.navbar-nav > li > a {
 		color: #222;
 		&:hover {
-			color: darken(#f1c40f, 5%);
-			transition: 0.5s;
+			color: darken(#ff5f5e, 5%);
+			transition: 0.1s;
 		}
 	}
 
@@ -83,19 +83,19 @@ p.alert, p.notice {
 	}
 
 	.dropdown-menu > li > a:hover {
-		background-color: darken(#f1c40f, 5%);
+		background-color: darken(#ff5f5e, 5%);
 		color: #fff;
 	}
 
 	.navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
-		background-color: darken(#f1c40f, 5%);
+		background-color: darken(#ff5f5e, 5%);
 		color: #fff;	
 	}
 
 }
 
 .dropdown-menu > .active > a {
-	background-color: #f1c40f;
+	background-color: #ff5f5e;
 	color: #fff;
 }
 
@@ -103,17 +103,17 @@ p.alert, p.notice {
 /* Button/link styles */
 
 .btn-custom {
-	color: darken(#f1c40f, 5%);
+	color: darken(#ff5f5e, 5%);
 	background-color: #fff;
-	border: 1px solid darken(#f1c40f, 5%);
+	border: 1px solid darken(#ff5f5e, 5%);
 	padding: 8px 20px;
 	border-radius: 5px;
 	font-family: 'Open Sans', sans-serif;
 	&:hover {
 		text-decoration: none;
-		background-color: darken(#f1c40f, 5%);
+		background-color: darken(#ff5f5e, 5%);
 		color: #fff;
-		transition: 0.5s;
+		transition: 0.25s;
 	}
 }
 
