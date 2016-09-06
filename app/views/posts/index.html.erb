@@ -9,18 +9,21 @@
 		<% @posts.each do |post| %>
 
 			<div class="col-md-12">
+				<% if post.post_img? %> 
 				<a href="/posts/<%= post.id %>">
 					<%= image_tag post.post_img.url, class: "book" %>
 					
 				</a>
-
+				<% end %>
 				<div class="book-index-desc">
 					<div class="book-index-content">
 						<h1><%= link_to post.title, post %></h1>
 						<h4><%= post.summary %></h4>
 						<h6><%= post.author %></h6>
+						<h6>Category: <strong><%= post.type.name %></strong></h6>
+
 						<br>
-						<p><%= link_to post.title %></p>
+						<p><%= link_to post.title, post %></p>
 					</div>
 				</div>
 
