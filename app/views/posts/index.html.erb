@@ -8,10 +8,22 @@
 
 		<% @posts.each do |post| %>
 
-			<div class="col-md-3">
+			<div class="col-md-12">
 				<a href="/posts/<%= post.id %>">
 					<%= image_tag post.post_img.url, class: "book" %>
+					
 				</a>
+
+				<div class="book-index-desc">
+					<div class="book-index-content">
+						<h1><%= link_to post.title %></h1>
+						<h4><%= post.summary %></h4>
+						<h6><%= post.author %></h6>
+						<br>
+						<p><%= link_to post.title %></p>
+					</div>
+				</div>
+
 			</div>	
 
 		<% end %>
