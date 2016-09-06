@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intranet</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+      <nav class="navbar navbar-default">
+
+        <div class="container">
+
+          <div class="navbar-header">
+            <%= link_to "Book Review", root_path, class: "navbar-brand" %>
+          </div>
+
+
+        <ul class="nav navbar-nav">
+          
+          <% if user_signed_in? %>
+            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <li><%= link_to "Log In", new_user_session_path %></li>
+
+          <% end %>
+        </ul>
+
+
+
+        <ul class="nav navbar-nav navbar-right ">
+          <% if user_signed_in? %>
+            <li><%= link_to "New Post", new_post_path %></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" area-expanded="false">Categories <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <% Type.all.each do |type| %>
+                      <li class="<%= 'active' if params[:type] == type.name %>">
+                        <%= link_to type.name, posts_path(type: type.name), class: "link" %>
+                      </li>
+                    <% end %>
+                </ul>
+            </li>
+          <% end %>
+        </ul>
+
+      </div>
+      </nav>
+
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+       <div class="container">
+          <%= yield %>
+      </div>
+  </body>
+</html>

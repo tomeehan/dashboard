@@ -1,0 +1,13 @@
+<%= simple_form_for @post, :html => { :multipart => true } do |f| %>
+	
+<%= select_tag(:type_id, options_for_select(@types), :prompt => "Select a type") %>
+
+	<%= f.file_field :post_img %>
+	<%= f.input :title, label: "Post Title" %>
+	<%= f.input :summary, label: "Summary" %>
+	<%= f.input :description %>
+	<%= f.input :author %>
+	<%= f.button :submit, :class => 'btn-custom2' %>
+
+
+<% end %>

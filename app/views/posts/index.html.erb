@@ -1,0 +1,25 @@
+<h1 class="current-category"><%= params[:type] %></h1>
+
+<% if @posts.count == 0 %>
+	<h1>There are no posts in this category</h1>
+	<% else %>
+
+	<div class="row">
+
+		<% @posts.each do |post| %>
+
+			<div class="col-md-3">
+				<a href="/posts/<%= post.id %>">
+					<%= image_tag post.post_img.url, class: "book" %>
+				</a>
+			</div>	
+
+		<% end %>
+
+
+	</div>
+
+
+	<% end %>
+
+<%= link_to "Create Post", new_post_path %>
