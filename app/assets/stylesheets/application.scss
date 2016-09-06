@@ -16,7 +16,7 @@
  *= require_tree .
  *= require_self
  */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,500); 
+@import url(http://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300,400,500); 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -58,7 +58,6 @@ p.alert, p.notice {
 
 .navbar {
 	font-family: 'Open Sans', sans-serif;
-	text-transform: uppercase;
 }
 .navbar-default {
 	background-color: #fff;
@@ -76,8 +75,10 @@ p.alert, p.notice {
 	.navbar-header {
 
 		.navbar-brand {
-			color: #222;
-			letter-spacing: 1.4px;
+			color: #ff5f5e;
+			font-family: 'Pacifico', sans-serif;
+			text-transformation: lowercase;
+			font-size: 250%;
 		}
 
 	}
