@@ -14,10 +14,10 @@
 			<p class="book-desc "><%= @post.description %></p>
 		</div>
 		<div class="reviews">
-			<h1>Reviews</h1>
+			<h1>Notes</h1>
 			<%= render @post.reviews %>
 			<div>
-				<%= link_to "Add review", new_post_review_path(@post), class: "btn btn-custom" %> 
+				<%= link_to "Add Note", new_post_review_path(@post), class: "btn btn-custom" %> 
 				<br>
 				<br>
 			</div>
