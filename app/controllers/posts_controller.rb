@@ -63,7 +63,7 @@ class PostsController < ApplicationController
 	private
 
 		def post_params
-			params.require(:post).permit(:title, :summary, :description, :author, :type_id ,:post_img)
+			params.require(:post).permit(:title, :summary, :description, :author, :type_id ,:post_img, :url)
 		end
 
 		def find_book
