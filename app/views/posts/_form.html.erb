@@ -2,7 +2,6 @@
 	
 <%= select_tag(:type_id, options_for_select(@types), :prompt => "Select a type") %>
 
-	<%= f.file_field :post_img %>
 	<%= f.input :title, label: "Post Title" %>
 	<%= f.input :summary, label: "Summary" %>
 	<%= f.input :url, label: "Link" %>
