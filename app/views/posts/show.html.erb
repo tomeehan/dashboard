@@ -1,20 +1,15 @@
 <div class="row">
-	<div class="col-md-4">
-		<%= image_tag @post.post_img.url, class: "post-show" %>
-	</div>
-
-	<div class="col-md-8">
+	<div class="col-md-12">
 		<div class="book-info">
 			<h2 class="book-title"><%= @post.title %></h2>
 			<h3 class="book-author"><span>From </span><%= @post.author %></h3>
-			<h2 class="avg-rating">Average Rating</h2>
-			<div class="average-review-rating" data-score=<%= @average_review %>></div>
-			<span class="number-of-reviews">Based on <%= @post.reviews.count %> reviews</span>
 			<h4>Category: <%= @post.type.name %></h4>
 			<p class="book-desc "><%= @post.url %></p>
+			<h2 class="book-title"><%= @post.user.name %></h2>
 
 
 		</div>
+	<div class="col-md-8">
 		<div class="reviews">
 			<h1>Notes</h1>
 			<%= render @post.reviews %>
@@ -23,6 +18,7 @@
 				<br>
 				<br>
 			</div>
+	</div>		
 			<div class="links btn-group">
 				<%= link_to "Back", root_path, class: "btn btn-custom" %>
 
@@ -37,25 +33,3 @@
 	</div>
 
 </div>
-
-
-
-<script>
-	$('.review-rating').raty({
-		readOnly: true, 
-		score: function() {
-			return $(this).attr('data-score');
-		},
-		path: '/assets/'
-	});
-</script>
-
-<script>
-	$('.average-review-rating').raty({
-		readOnly: true, 
-		path: '/assets/',
-		score: function() {
-			return $(this).attr('data-score')
-		}
-	})
-</script>
