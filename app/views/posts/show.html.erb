@@ -1,12 +1,16 @@
 <div class="row">
 	<div class="col-md-12">
-		<div class="book-info">
-			<h2 class="book-title"><%= @post.title %></h2>
-			<h3 class="book-author"><span>From </span><%= @post.author %></h3>
-			<h4>Category: <%= @post.type.name %></h4>
-			<p class="book-desc "><%= @post.url %></p>
-			<h6><%= @post.user.name %></h6>
-			<p><%= @post.description %></p>
+		<div class="post-info">
+			<h2 class="post-title"><%= @post.title %></h2>
+			<h6>Submited on: <%= @post.created_at.strftime("%e/%-m/%Y") %>, posted by <%= link_to @post.user.name, user_path(id: @post.user.id) %> in <%= link_to @post.type.name, posts_path(type: @post.type.name), class: "link" %></h6>
+			<h6 ><span>Author: </span><%= @post.author %></h6>
+
+
+
+			<h6>Link: <%= @post.url %></h6>
+			<div class="post-desc">
+				<p><%= markdown(@post.description) %></p>
+			</div>
 <div class="links btn-group">
 				<%= link_to "Back", root_path, class: "btn btn-custom" %>
 
