@@ -27,7 +27,7 @@
 	background-color: #fff;
 	border-radius: 2px;
 	box-shadow: 1px 3px 10px 2px rgba(0, 0, 0, 0.1);;
-	padding: 1.5em 1.25em;
+	padding: 0.35em 1.25em;
 }
 
 
@@ -163,15 +163,11 @@ p.alert, p.notice {
 }
 
 .book-index-desc {
-	margin-left: 100px;
 	@include background-tile;
-	padding-left: 100px;
 	margin-top: 25px;
-	height: 300px;
 }
 
 .book-index-content {
-	padding-left: 100px;
 
 }
 

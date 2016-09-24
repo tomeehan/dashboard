@@ -11,7 +11,9 @@
 			<div class="average-review-rating" data-score=<%= @average_review %>></div>
 			<span class="number-of-reviews">Based on <%= @post.reviews.count %> reviews</span>
 			<h4>Category: <%= @post.type.name %></h4>
-			<p class="book-desc "><%= @post.description %></p>
+			<p class="book-desc "><%= @post.url %></p>
+
+
 		</div>
 		<div class="reviews">
 			<h1>Notes</h1>
@@ -21,7 +23,6 @@
 				<br>
 				<br>
 			</div>
-
 			<div class="links btn-group">
 				<%= link_to "Back", root_path, class: "btn btn-custom" %>
 

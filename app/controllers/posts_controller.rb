@@ -60,6 +60,11 @@ class PostsController < ApplicationController
 		redirect_to root_path
 	end
 
+  	def url_with_protocol(url)
+		    /^http/i.match(url) ? url : "http://#{url}"
+ 		end
+
+
 	private
 
 		def post_params
