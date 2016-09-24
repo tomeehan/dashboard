@@ -15,8 +15,7 @@
 						<h4><%= link_to post.title, post %></h4>
 						<h6><%= post.summary %></h6>
 						<h6>Posted in:
-						<%= link_to post.type.name, posts_path(type: post.type.name), class: "link" %></h6>
-						<h6>Posted by <%= link_to post.user.name, user_path(id: post.user.id) %></h6>
+						<%= link_to post.type.name, posts_path(type: post.type.name), class: "link" %>, Posted by <%= link_to post.user.name, user_path(id: post.user.id) %></h6>
 					</div>
 				</div>
 

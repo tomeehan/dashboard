@@ -5,9 +5,18 @@
 			<h3 class="book-author"><span>From </span><%= @post.author %></h3>
 			<h4>Category: <%= @post.type.name %></h4>
 			<p class="book-desc "><%= @post.url %></p>
-			<h2 class="book-title"><%= @post.user.name %></h2>
+			<h6><%= @post.user.name %></h6>
 			<p><%= @post.description %></p>
+<div class="links btn-group">
+				<%= link_to "Back", root_path, class: "btn btn-custom" %>
 
+					<% if user_signed_in? %>
+						<% if @post.user_id == current_user.id %>
+							<%= link_to "Edit", edit_post_path(@post), class: "btn btn-custom" %>
+							<%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-custom" %>
+						<% end %>
+					<% end %>
+			</div>	
 
 		</div>
 	<div class="col-md-8">
@@ -20,16 +29,7 @@
 				<br>
 			</div>
 	</div>		
-			<div class="links btn-group">
-				<%= link_to "Back", root_path, class: "btn btn-custom" %>
-
-					<% if user_signed_in? %>
-						<% if @post.user_id == current_user.id %>
-							<%= link_to "Edit", edit_post_path(@post), class: "btn btn-custom" %>
-							<%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-custom" %>
-						<% end %>
-					<% end %>
-			</div>		
+				
 		</div>
 	</div>
 
