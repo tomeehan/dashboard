@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+	attr_accessor :website
+
 	has_many :posts
 	has_many :reviews
   # Include default devise modules. Others available are:
