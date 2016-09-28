@@ -1,7 +1,9 @@
 <div class="review">
-	<div class="review-rating" data-score="<%= review.rating %>"></div>
+	<h6><%= link_to review.user.name, user_path(id: review.user.id) %> on <%= review.created_at.strftime("%e/%-m/%Y") %></h6>
 	<p class="review-comment"><%= review.comment %></p>
-	<p><strong><%= review.user.name %></strong></p>
+	
+
+
 
 	<% if user_signed_in? %>
 
