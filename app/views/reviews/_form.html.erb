@@ -1,9 +1,4 @@
 <%= simple_form_for([@post, @post.reviews.build]) do |f| %>
-	
-<div id="rating-form">
-	<label>Rating</label>
-</div>
-
 	<%= f.input :comment %>
 	<%= f.button :submit, label: "Email",  :class => 'btn-custom2' %>
 <% end %>
