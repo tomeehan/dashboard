@@ -1,11 +1,19 @@
-<div class="col-md-9">
+<div class="col-md-7">
 	<h1><%= @user.name %></h1>
 	<h4><%= @user.job_title %></h4>
 	<h4><%= @user.email %></h4>
-	<h6>Post karma: <strong><%= @user.posts.count %></strong></h6>
-	<h6>Note karma: <strong><%= @user.reviews.count %></strong></h6>
+	
+	<h6>Note karma: </h6>
 
 </div>	
+<div class="col-md-1">
+	<h6 style="text-align: center">Post karma:</h6>
+	<h1 style="text-align: center"><strong><%= @user.posts.count %></strong></h1>
+</div>
+<div class="col-md-1">
+	<h6 style="text-align: center">Notes:</h6>
+	<h1 style="text-align: center"><strong><%= @user.reviews.count %></strong></h1>
+</div>
 <div class="col-md-3">
 	<h6><strong>Phone:</strong> <%= @user.phone %></h6>
 	<h6><strong>Website:</strong> <%= @user.website %></h6>
