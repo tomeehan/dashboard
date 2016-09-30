@@ -30,5 +30,5 @@ Note: Post categories have to be created mannually through the Rails console.
 
 1. `rails console`
 2. `Type.connection`
-3. `Type.create(name: "My Category Name")
+3. `Type.create(name: "My Category Name")`
 
