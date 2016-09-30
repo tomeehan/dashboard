@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Minibarra Dashboard is running:
 
-Things you may want to cover:
+* Ruby 2.3.0
 
-* Ruby version
+* Rails 5
 
-* System dependencies
+* PostreSQL
 
-* Configuration
+To run the dashboard, run: 
 
-* Database creation
+1. `bundle install`
+2. `rake db:create`
+3. `rake db:migrate`
+4. `rails server`
 
-* Database initialization
+Note: Post categories have to be created mannually through the Rails console. 
 
-* How to run the test suite
+1. `Rails Console`
+2. `Type.connection`
+3. `Type.create(name: "My Category Name")
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
