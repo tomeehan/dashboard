@@ -1,5 +1,11 @@
 # README
 
+Minibarra Dashboard is a dashbaord for the team at [Minibarra](http://www.minibarra.com). 
+
+We post links from great articles/podcasts/books we've read, and share our notes with the team. 
+
+In the next week, I'll be adding the actual dashboard with our marketing metrics. 
+
 Minibarra Dashboard is running:
 
 * Ruby 2.3.0
