@@ -28,7 +28,7 @@ To run the dashboard, run:
 
 Note: Post categories have to be created mannually through the Rails console. 
 
-1. `Rails Console`
+1. `rails console`
 2. `Type.connection`
 3. `Type.create(name: "My Category Name")
 
