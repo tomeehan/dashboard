@@ -14,8 +14,9 @@
 					<div class="book-index-content">
 						<h4><%= link_to post.title, post %></h4>
 						<h6><%= post.summary %></h6>
-						<h6>Submited on: <%= post.created_at.strftime("%e/%-m/%Y") %>, posted by <%= link_to post.user.name, user_path(id: post.user.id) %> in
+						<h6>Submitted <%= time_ago_in_words(post.created_at) %> ago, by <%= link_to post.user.name, user_path(id: post.user.id) %> in
 						<%= link_to post.type.name, posts_path(type: post.type.name), class: "link" %></h6>
+
 					</div>
 				</div>
 
