@@ -50,7 +50,7 @@
 					<h6 class="goal-header">Objective:</h6>
 					<p><%= goal.objecive %></p>
 					<h6 class="goal-header">Key Results:</h6>
-					<p><%= goal.key_results %></p>
+					<p><%= markdown(goal.key_results) %></p>
 					<h6 class="goal-header">Deadline:</h6>
 					<p><%= goal.deadline.strftime("%d %B %Y") %></p>
 
