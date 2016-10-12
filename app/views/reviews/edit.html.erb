@@ -6,9 +6,10 @@
 					<label>Rating</label>
 				</div>
 					<%= f.input :comment %>
-	<%= f.button :submit, 'Update Note', :class => 'btn-custom2' %>
+					<div class="new-btn">
+						<%= f.button :submit, 'Update Note', :class => 'waves-effect btn-large' %>
+					</div>
 			<% end %>
-
 		<script>
 			$('#rating-form').raty({
 				path: '/assets/',
@@ -17,3 +18,7 @@
 		</script>
 	</div>
 </div>
+
+
+
+

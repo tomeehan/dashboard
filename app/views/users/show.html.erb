@@ -1,17 +1,32 @@
 <h1><%= @user.name %></h1>
 <h4><%= @user.email %></h4>
 
+<div class="col-md-6">
+	<div class="snippet-index-desc">
+		<div class="snippet-index-content">
+			<h6>Snippet:</h6>
+			 <% @snippets.each do |snippet| %>
+				<p><%= snippet.summary %></p>
+		 	<% end %>
+		</div>
+
+	</div>	
+	<div class="new-btn">
+		<%= link_to "New Snippet", new_snippet_path,  :class => 'waves-effect btn-large' %>
+	</div>
+</div>
+
 <h1 class="current-category"><%= params[:type] %></h1>
 
 <% if @posts.count == 0 %>
-	<h1>There are no posts in this category</h1>
+	<h1>This user has no posts.</h1>
 	<% else %>
 
 	<div class="row">
 
-		<% @posts.each do |post| %>
-
-			<div class="col-md-12">
+		<div class="col-md-8">
+			<h4>Posts</h4>
+			<% @posts.each do |post| %>
 				
 				<div class="book-index-desc">
 					<div class="book-index-content">
@@ -22,10 +37,38 @@
 
 					</div>
 				</div>
+			<% end %>
+		</div>	
 
-			</div>	
+	<div class="col-md-4">
+		<h4>OKR's</h4>
+<% @goals.each do |goal| %>
+		<div class="goal-index-desc">
+			<div class="goal-index-content">
+			 	
+			 	<div class="okr-index-container">
+					<h6 class="goal-header">Objective:</h6>
+					<p><%= goal.objecive %></p>
+					<h6 class="goal-header">Key Results:</h6>
+					<p><%= goal.key_results %></p>
+					<h6 class="goal-header">Deadline:</h6>
+					<p><%= goal.deadline.strftime("%d %B %Y") %></p>
 
-		<% end %>
+				</div>
+
+				<div class="edit-goal-index-button">
+					<%= link_to "EDIT", edit_goal_path %>
+				</div>
+		 	
+		 	
+		</div>
+
+	</div>	
+	<% end %>
+	<div class="new-btn">
+		<%= link_to "New OKR", new_goal_path,  :class => 'waves-effect btn-large' %>
+	</div>
+</div>
 
 
 	</div>

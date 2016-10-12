@@ -27,8 +27,8 @@
 		<div class="reviews">
 			<h1>Notes</h1>
 			<%= render @post.reviews %>
-			<div>
-				<%= link_to "Add Note", new_post_review_path(@post), class: "btn btn-custom" %> 
+			<div class="new-btn">
+				<%= link_to "Add Note", new_post_review_path(@post), class: "waves-effect btn-large" %> 
 				<br>
 				<br>
 			</div>

@@ -1,13 +1,16 @@
 <%= simple_form_for @post, :html => { :multipart => true } do |f| %>
-	
+
 <%= select_tag(:type_id, options_for_select(@types), :prompt => "Select a type") %>
-
-	<%= f.input :title, label: "Post Title" %>
-	<%= f.input :summary, label: "Summary" %>
-	<%= f.input :url, label: "Link" %>
+<div class="form-material">
+	<%= f.input :title, label: false, placeholder: "Post Title" %>
+	<%= f.input :summary, label: false, placeholder: "Summary" %>
+	<%= f.input :url, label: false, placeholder: "Link" %>
 	<%= f.input :description %>
-	<%= f.input :author %>
-	<%= f.button :submit, :class => 'btn-custom2' %>
+	<%= f.input :author, label: false, placeholder: "Author" %>
+</div>	
 
+	<div class="new-btn">
+		<%= f.button :submit, :class => 'waves-effect btn-large' %>
+	</div>
 
 <% end %>

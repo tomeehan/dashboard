@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  objecive: MyString
+  key_results: MyText
+  deadline: 2016-10-10
+
+two:
+  objecive: MyString
+  key_results: MyText
+  deadline: 2016-10-10

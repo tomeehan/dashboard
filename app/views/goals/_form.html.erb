@@ -1,0 +1,15 @@
+<%= simple_form_for(@goal) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs form-material">
+    <%= f.input :objecive, label: false %>
+    <%= f.input :key_results, label: false %>
+    <%= f.input :deadline, label: false %>
+  </div>
+
+  <div class="form-actions new-btn">
+    <%= f.button :submit, :class => 'waves-effect btn-large' %>
+  </div>
+<% end %>
+
+

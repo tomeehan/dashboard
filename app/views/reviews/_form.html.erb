@@ -1,4 +1,4 @@
 <%= simple_form_for([@post, @post.reviews.build]) do |f| %>
 	<%= f.input :comment %>
-	<%= f.button :submit, label: "Email",  :class => 'btn-custom2' %>
+	<%= f.button :submit, "Post Note",  :class => 'waves-effect btn-large' %>
 <% end %>
