@@ -58,7 +58,7 @@
        <p class="alert"><%= alert %></p>
 
        <%= @users.each do |user| %>
-          <p><%= link_to user.name %></p>
+          <p><%= link_to user.name, user_path(id: user.id) %></p>
        <% end %>
 
        <div class="container">
