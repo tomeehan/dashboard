@@ -57,6 +57,10 @@
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 
+       <%= @users.each do |user| %>
+          <p><%= link_to user.name %></p>
+       <% end %>
+
        <div class="container">
           <%= yield %>
       </div>
