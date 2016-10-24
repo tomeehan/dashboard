@@ -20,7 +20,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 /* Variables, mixins, etc.. */
+
+.user-list {
+	text-align: center;
+}
 
 .user-social {
 	background-color: #f5f5f5;
