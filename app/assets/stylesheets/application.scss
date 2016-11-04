@@ -228,8 +228,6 @@ p.alert, p.notice {
 	@include okr-background-tile;
 	margin-top: 25px;
 	margin-bottom: 25px;
-	font-weight: 500;
-	font-family: 'Open Sans', sans-serif;
 }
 
 .goal-index-desc:hover {
@@ -237,12 +235,7 @@ p.alert, p.notice {
 }
 
 .goal-index-content h4 {
-	font-weight: 600;
-
-}
-
-.goal-index-content p img {
-	text-align: center;
+	font-weight: 500;
 }
 
 .okr-index-container {
@@ -585,4 +578,3 @@ input[type="color"]:focus,
 	font-family: Pacifico;
 	font-size: 125%;
 }
-
