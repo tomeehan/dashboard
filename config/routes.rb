@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   	resources :reviews
   end
 
-  root 'posts#index'
+  root 'company_goals#index'
 
 end
