@@ -61,7 +61,7 @@
 							</div>
 							<div class="complete-goal-index-button">
 								<%= link_to "Completed", goal_path(:id => goal.id, "goal[complete]" => true), :remote => true, :method => :patch, 
-:data => {:confirm => "Nice work #{current_user.name}. Can you confirm you've completeted #{goal.objecive}?"} %>
+:data => {:confirm => "Nice work, #{current_user.name}. Can you confirm you've completeted:\n\n#{goal.objecive}"} %>
 
 							</div>
 			 	
