@@ -95,12 +95,12 @@
 								<h6 class="goal-header">Deadline:</h6>
 								<p><%= goal.deadline.strftime("%d %B %Y") %></p>
 							</div>
+							<% if current_user.id == goal.user.id %>
+								<div class="edit-goal-index-button">
+									<%= link_to "Not Completed", goal_path(:id => goal.id, "goal[complete]" => false), :remote => true, :method => :patch, :data => {:confirm => 'Are you sure you want to mark this OKR as incomplete?'}  %>
 
-							<div class="edit-goal-index-button">
-								<%= link_to "Not Completed", goal_path(:id => goal.id, "goal[complete]" => false), :remote => true, :method => :patch, :data => {:confirm => 'Are you sure you want to mark this OKR as incomplete?'}  %>
-
-							</div>
-			 	
+								</div>
+			 				<% end %>
 			 	
 						</div>
 		
