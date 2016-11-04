@@ -269,16 +269,47 @@ p.alert, p.notice {
 
 
       -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
-  /* ...and now for the proper property */
-  transition:.5s;
+	  -ms-transition:.5s;
+	  -moz-transition:.5s;
+	  -webkit-transition:.5s;
+
+	  transition:.5s;
 }
 .edit-goal-index-button a:hover {
 	background-color: #e55554;
 	text-decoration: none;
 
+}
+
+.complete-goal-index-button {
+	background-color: #3ddc97 ;
+	color: white;
+	text-align: center;
+}
+
+.complete-goal-index-button a {
+
+	color: white;
+	display:inline-block;
+    width:100%;
+    height:100%;
+    padding: 25px;
+    font-weight: 300;
+    font-size: 1.2em;
+
+
+      -o-transition:.5s;
+ 	 -ms-transition:.5s;
+  	-moz-transition:.5s;
+  	-webkit-transition:.5s;
+
+  	transition:.5s;
+	
+}
+
+.complete-goal-index-button a:hover {
+	background-color: #36c687;
+	text-decoration: none;
 }
 .post-show {
 	height: 475px;

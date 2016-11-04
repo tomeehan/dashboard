@@ -59,6 +59,10 @@
 							<div class="edit-goal-index-button">
 								<%= link_to "EDIT", edit_goal_path(id: goal.id) %>
 							</div>
+							<div class="complete-goal-index-button">
+								<%= link_to "Completed", goal_path(:id => goal.id, "goal[complete]" => true), :remote => true, :method => :patch %>
+
+							</div>
 			 	
 			 	
 						</div>
