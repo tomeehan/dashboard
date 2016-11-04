@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<% if user_signed_in? %>
 <div class="row">
   <div class="col-md-9">
     <h1>Company OKR's</h1>
@@ -68,3 +68,4 @@
     <% end %>    
   <% end %>
 </div>
+<% end %>

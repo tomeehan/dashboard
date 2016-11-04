@@ -3,7 +3,6 @@
   <head>
     <title>Intranet</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -13,17 +12,18 @@
       <nav class="navbar navbar-default">
 
         <div class="container">
-
+        
           <div class="navbar-header">
             <%= link_to "minibarra", root_path, class: "navbar-brand" %>
 
           </div>
 
-
-        <ul class="nav navbar-nav">
-          <li><%= link_to "Posts", posts_path %></li>
-          <li><%= link_to "Company", company_goals_path %></li>
-        </ul>
+        <%if user_signed_in? %>
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Posts", posts_path %></li>
+            <li><%= link_to "Company", company_goals_path %></li>
+          </ul>
+       <% end %> 
 
 
 
@@ -62,6 +62,7 @@
        <div class="container">
           <%= yield %>
       </div>
+
 
       <div class="footer">
         <p class="minibarra-logo">minibarra</p>

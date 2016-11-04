@@ -10,7 +10,6 @@ class PostsController < ApplicationController
 			@type_id = Type.find_by(name: params[:type]).id
 			@posts = Post.where(:type_id => @type_id).order("created_at DESC")
 		end
-
 	end
 
 	def new
@@ -57,7 +56,7 @@ class PostsController < ApplicationController
 
   	def url_with_protocol(url)
 		    /^http/i.match(url) ? url : "http://#{url}"
- 		end
+ 	end
 
 
 	private
