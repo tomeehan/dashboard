@@ -56,16 +56,19 @@
 								<p><%= markdown(goal.key_results) %></p>
 								<h6 class="goal-header">Deadline:</h6>
 								<p><%= goal.deadline.strftime("%d %B %Y") %></p>
+								<p><%= goal.user.id %></p>
+								<p><%= current_user.id %></p>
 							</div>
+							<% if current_user.id == goal.user.id %>
+								<div class="edit-goal-index-button">
+									<%= link_to "EDIT", edit_goal_path(id: goal.id) %>
+								</div>
+								<div class="complete-goal-index-button">
+									<%= link_to "Completed", goal_path(:id => goal.id, "goal[complete]" => true), :remote => true, :method => :patch, 
+	:data => {:confirm => "Nice work, #{current_user.name}. Can you confirm you've completeted:\n\n#{goal.objecive}"} %>
 
-							<div class="edit-goal-index-button">
-								<%= link_to "EDIT", edit_goal_path(id: goal.id) %>
-							</div>
-							<div class="complete-goal-index-button">
-								<%= link_to "Completed", goal_path(:id => goal.id, "goal[complete]" => true), :remote => true, :method => :patch, 
-:data => {:confirm => "Nice work, #{current_user.name}. Can you confirm you've completeted:\n\n#{goal.objecive}"} %>
-
-							</div>
+								</div>
+							<% end %>
 			 	
 			 	
 						</div>
