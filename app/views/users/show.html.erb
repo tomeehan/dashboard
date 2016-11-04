@@ -56,8 +56,6 @@
 								<p><%= markdown(goal.key_results) %></p>
 								<h6 class="goal-header">Deadline:</h6>
 								<p><%= goal.deadline.strftime("%d %B %Y") %></p>
-								<p><%= goal.user.id %></p>
-								<p><%= current_user.id %></p>
 							</div>
 							<% if current_user.id == goal.user.id %>
 								<div class="edit-goal-index-button">
