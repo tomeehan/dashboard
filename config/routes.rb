@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
 
+  resources :company_goals
   resources :goals
   resources :snippets
   devise_for :users

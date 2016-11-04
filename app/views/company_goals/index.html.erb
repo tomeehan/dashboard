@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-md-9">
+    <h1>Company OKR's</h1>
+  </div>
+  <div class="col-md-3">
+    <div class="new-btn">
+      <%= link_to 'New Company Goal', new_company_goal_path, :class => 'waves-effect btn-large' %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <% @company_goals.each do |company_goal| %>
+    <% if company_goal.complete == false %>
+      <div class="col-md-4">
+        <div class="goal-index-desc">
+          <div class="goal-index-content">
+            <div class="okr-index-container">
+              <h6 class="goal-header">Objective:</h6>
+              <p><%= company_goal.objective %></p>
+              <h6 class="goal-header">Key Results:</h6>
+              <p><%= markdown(company_goal.key_results) %></p>
+              <h6 class="goal-header">Deadline:</h6>
+              <p><%= company_goal.deadline.strftime("%d %B %Y") %></p> 
+            </div>
+          </div>
+                 
+          <div class="edit-goal-index-button">
+            <%= link_to "EDIT", edit_company_goal_path(id: company_goal.id) %>
+          </div>
+          <div class="complete-goal-index-button">
+            <%= link_to "Completed", company_goal_path(:id => company_goal.id, "company_goal[complete]" => true), :remote => true, :method => :patch %>
+          </div>
+        </div>   
+      </div>  
+    <% end %>    
+  <% end %>
+</div>
+
+<hr>
+
+<div class="row">
+  <% @company_goals.each do |company_goal| %>
+    <% if company_goal.complete == true %>
+    <h4>Past OKR's</h4>
+      <div class="col-md-4">
+        <div class="goal-index-desc">
+          <div class="goal-index-content">
+            <div class="okr-index-container">
+              <h6 class="goal-header">Objective:</h6>
+              <p><%= company_goal.objective %></p>
+              <h6 class="goal-header">Key Results:</h6>
+              <p><%= markdown(company_goal.key_results) %></p>
+              <h6 class="goal-header">Deadline:</h6>
+              <p><%= company_goal.deadline.strftime("%d %B %Y") %></p> 
+            </div>
+          </div>
+                 
+          <div class="edit-goal-index-button">
+            <%= link_to "Not Completed", company_goal_path(:id => company_goal.id, "company_goal[complete]" => false), :remote => true, :method => :patch, :data => {:confirm => 'Are you sure you want to mark this OKR as incomplete?'}  %>
+
+          </div>
+        </div>   
+      </div>  
+    <% end %>    
+  <% end %>
+</div>

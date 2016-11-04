@@ -21,8 +21,8 @@
 
 
         <ul class="nav navbar-nav">
-
-
+          <li><%= link_to "Posts", posts_path %></li>
+          <li><%= link_to "Company", company_goals_path %></li>
         </ul>
 
 
@@ -56,11 +56,15 @@
       </div>
       </nav>
 
-       <p class="notice"><%= notice %></p>
+
        <p class="alert"><%= alert %></p>
 
        <div class="container">
           <%= yield %>
+      </div>
+
+      <div class="footer">
+        <p class="minibarra-logo">minibarra</p>
       </div>
   </body>
 </html>

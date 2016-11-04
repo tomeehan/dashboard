@@ -1,0 +1,2 @@
+module CompanyGoalsHelper
+end

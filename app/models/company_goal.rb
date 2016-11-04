@@ -1,0 +1,2 @@
+class CompanyGoal < ApplicationRecord
+end

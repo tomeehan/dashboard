@@ -1,0 +1,14 @@
+<%= simple_form_for(@company_goal) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :objective %>
+    <%= f.input :key_results %>
+    <%= f.input :deadline %>
+    <%= f.input :complete %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

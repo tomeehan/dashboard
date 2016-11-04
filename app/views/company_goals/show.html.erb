@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Objective:</strong>
+  <%= @company_goal.objective %>
+</p>
+
+<p>
+  <strong>Key results:</strong>
+  <%= @company_goal.key_results %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @company_goal.deadline %>
+</p>
+
+<p>
+  <strong>Complete:</strong>
+  <%= @company_goal.complete %>
+</p>
+
+<%= link_to 'Edit', edit_company_goal_path(@company_goal) %> |
+<%= link_to 'Back', company_goals_path %>
