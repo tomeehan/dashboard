@@ -1,14 +1,16 @@
 <%= simple_form_for(@company_goal) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :objective %>
-    <%= f.input :key_results %>
+  <div class="form-material">
+    <%= f.input :objective,  label: false, placeholder: "Objective" %>
+    <%= f.input :key_results, label: false, placeholder: "Key Results" %>
     <%= f.input :deadline %>
     <%= f.input :complete %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <div class="new-btn">
+      <%= f.button :submit, :class => 'waves-effect btn-large' %>
+    </div>
   </div>
 <% end %>
