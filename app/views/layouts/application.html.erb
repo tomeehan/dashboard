@@ -21,21 +21,6 @@
 
 
         <ul class="nav navbar-nav">
-          
-          <% if user_signed_in? %>
-            <li><%= link_to 'My Profile', user_path(current_user)%></li>
-            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-          <% else %>
-            <li><%= link_to "Sign Up", new_user_registration_path %></li>
-            <li><%= link_to "Log In", new_user_session_path %></li>
-
-
-          <% end %>
-        </ul>
-
-
-
-        <ul class="nav navbar-nav navbar-right ">
           <% if user_signed_in? %>
             <li><%= link_to "New Post", new_post_path %></li>
             <li class="dropdown">
@@ -48,6 +33,35 @@
                     <% end %>
                 </ul>
             </li>
+          <% end %> 
+
+        </ul>
+
+
+
+        <ul class="nav navbar-nav navbar-right ">
+          <% if user_signed_in? %>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" area-expanded="false">Team <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <% User.all.each do |user| %>
+                      <li>
+                        <%= link_to user.name, user_path(id: user.id), class: "link" %>
+                      </li>
+                    <% end %>
+                </ul>
+            </li>
+
+
+
+
+            <li><%= link_to 'My Profile', user_path(current_user)%></li>
+            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <li><%= link_to "Log In", new_user_session_path %></li>
+
+
           <% end %>
         </ul>
 
