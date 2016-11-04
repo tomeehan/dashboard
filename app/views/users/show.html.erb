@@ -60,7 +60,7 @@
 								<%= link_to "EDIT", edit_goal_path(id: goal.id) %>
 							</div>
 							<div class="complete-goal-index-button">
-								<%= link_to "Completed", goal_path(:id => goal.id, "goal[complete]" => true), :remote => true, :method => :patch %>
+								<%= link_to "Completed", goal_path(:id => goal.id, "goal[complete]" => true), :remote => true, :method => :patch, :data => {:confirm => 'Are you sure?'} %>
 
 							</div>
 			 	
@@ -91,7 +91,7 @@
 							</div>
 
 							<div class="edit-goal-index-button">
-								<%= link_to "Not Completed", goal_path(:id => goal.id, "goal[complete]" => false), :remote => true, :method => :patch %>
+								<%= link_to "Not Completed", goal_path(:id => goal.id, "goal[complete]" => false), :remote => true, :method => :patch, :data => {:confirm => 'Are you sure you want to mark this OKR as incomplete?'}  %>
 
 							</div>
 			 	
