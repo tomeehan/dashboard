@@ -91,7 +91,8 @@
 							</div>
 
 							<div class="edit-goal-index-button">
-								<%= link_to "EDIT", edit_goal_path(id: goal.id) %>
+								<%= link_to "Not Completed", goal_path(:id => goal.id, "goal[complete]" => false), :remote => true, :method => :patch %>
+
 							</div>
 			 	
 			 	
