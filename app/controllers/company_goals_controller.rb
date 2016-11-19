@@ -5,6 +5,8 @@ class CompanyGoalsController < ApplicationController
   # GET /company_goals.json
   def index
     @company_goals = CompanyGoal.all
+    @goals = Goal.all.order("created_at DESC")
+    @users = User.all.order("created_at DESC")
   end
 
   # GET /company_goals/1
