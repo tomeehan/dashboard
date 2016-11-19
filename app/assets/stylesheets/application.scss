@@ -105,6 +105,7 @@ p.alert, p.notice {
 
 	.navbar-nav > li > a {
 		color: #222;
+
 		&:hover {
 			color: darken(#ff5f5e, 5%);
 			transition: 0.1s;
@@ -253,6 +254,10 @@ p.alert, p.notice {
 
 .okr-index-container p {
 	margin-bottom: 15px;
+}
+
+.okr-index-container li {
+	line-height: 2em;
 }
 
 .edit-goal-index-button {
