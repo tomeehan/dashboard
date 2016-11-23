@@ -21,7 +21,8 @@ Minibarra Dashboard is running:
 
 To run the dashboard, run: 
 
-1. `bundle install`
+1. `cd dashboard`
+2. `bundle install`
 2. `rake db:create`
 3. `rake db:migrate`
 4. `rails server`
