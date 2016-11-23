@@ -4,7 +4,7 @@ Minibarra Dashboard is a dashboard for the team at [Minibarra](http://www.miniba
 
 We post links from great articles/podcasts/books we've read, and share our notes with the team. 
 
-In the next week, I'll be adding the actual dashboard with our marketing metrics. 
+After launch, I'll be adding a dashboard with our marketing metrics and KPI's.
 
 Here it is in production: 
 [https://ancient-savannah-16969.herokuapp.com](https://ancient-savannah-16969.herokuapp.com)
