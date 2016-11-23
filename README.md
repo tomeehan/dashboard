@@ -4,12 +4,20 @@ Minibarra Dashboard is a dashboard for the team at [Minibarra](http://www.miniba
 
 We post links from great articles/podcasts/books we've read, and share our notes with the team. 
 
-After launch, I'll be adding a dashboard with our marketing metrics and KPI's.
-
 Here it is in production: 
 [https://ancient-savannah-16969.herokuapp.com](https://ancient-savannah-16969.herokuapp.com)
 
-You're welcome to sign up, read through, and contribute (as long as it's useful)
+You're welcome to sign up, read through, and contribute (as long as it's useful).
+
+***
+## To-do
+
+* After launch, add a dashboard with our marketing metrics and KPI's — only available to users with a '@minibarra.com` email.
+* Add password recovery.
+* Add email verification.
+* Make mobile friendly.
+
+***
 
 Minibarra Dashboard is running:
 
@@ -18,6 +26,8 @@ Minibarra Dashboard is running:
 * Rails 5
 
 * PostreSQL
+
+***
 
 To run the dashboard, run: 
 
