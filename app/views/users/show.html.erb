@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
-
+<div class="row">
 <h1><%= @user.name %></h1>
 <h4><%= @user.email %></h4>
 
 <% if user_signed_in? && @user.id == current_user.id %>
 		<p><%= link_to 'Edit Profile',edit_user_registration_path %></p>
 <% end %>
-<div class="col-md-12">
+<div class="col-md-6 col-sm-offset-3">
 	<div class="snippet-index-desc">
 		<div class="snippet-index-content">
 			<h6>Snippet:</h6>
@@ -29,7 +29,7 @@
 	</div>
 	<% end %>
 </div>
-
+</div>
 <h1 class="current-category"><%= params[:type] %></h1>
 
 
@@ -55,7 +55,6 @@
 
 	<% end %>	
 	</div>	
-</div>
 	
 	<div class="col-md-4">
 	<h2>OKR's</h2>
@@ -136,3 +135,4 @@
 
 
 
+</div>
