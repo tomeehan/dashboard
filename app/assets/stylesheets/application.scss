@@ -17,6 +17,7 @@
  *= require_self
  */
 @import url(http://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300,400,500); 
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,600,700);
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -24,7 +25,7 @@
 /* Variables, mixins, etc.. */
 
 * {
-	font-family: 'Open sans', sans-serif;
+		font-family: 'Ubuntu', sans-serif;
 }
 
 .user-list {
@@ -80,11 +81,11 @@
 
 body {
 	background-color: #f5f5f5;
-	font-family: 'Open Sans', serif;
+		font-family: 'Ubuntu', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Open Sans', sans-serif;
+		font-family: 'Ubuntu', sans-serif;
 	font-weight: 300;
 }
 
@@ -255,7 +256,7 @@ p.alert, p.notice {
 
 .okr-index-container h6 {
 	font-weight: 300;
-	color: #ff5f5e;
+	color: rgb(6, 71, 137);
 }
 
 .okr-index-container p {

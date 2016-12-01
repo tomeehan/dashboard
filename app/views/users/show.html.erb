@@ -6,29 +6,39 @@
 <% if user_signed_in? && @user.id == current_user.id %>
 		<p><%= link_to 'Edit Profile',edit_user_registration_path %></p>
 <% end %>
-<div class="col-md-6">
+<div class="col-md-12">
 	<div class="snippet-index-desc">
 		<div class="snippet-index-content">
 			<h6>Snippet:</h6>
 			 <% @snippets.each do |snippet| %>
-				<p><%= snippet.summary %></p>
+				<p><%= markdown(snippet.summary) %></p>
+				<div class="new-btn">
+				<p>	
+					<%= link_to "Edit", edit_snippet_path(id: snippet.id), :class => 'waves-effect btn-large' %>
+				</p>
+				</div>
+				
 		 	<% end %>
 		</div>
 
 	</div>	
+	<% if @user.snippets.count == 0 %>
 	<div class="new-btn">
-		<%= link_to "New Snippet", new_snippet_path,  :class => 'waves-effect btn-large' %>
+		<%= link_to "Create Snippet", new_snippet_path,  :class => 'waves-effect btn-large' %>
+
 	</div>
+	<% end %>
 </div>
 
 <h1 class="current-category"><%= params[:type] %></h1>
 
 
 <div class="row">
+	<div class="cold-md-8">
 	<% if @posts.count == 0 %>
 		<h1>This user has no posts.</h1>
 		<% else %>
-		<div class="col-md-8">
+
 			<h4>Posts</h4>
 			<% @posts.each do |post| %>
 				
@@ -42,11 +52,16 @@
 					</div>
 				</div>
 			<% end %>
-		</div>
-	<% end %>		
 
+	<% end %>	
+	</div>	
+</div>
+	
 	<div class="col-md-4">
-		<h4>OKR's</h4>
+	<h2>OKR's</h2>
+	<h4>Current OKR's</h4>
+		<% if @user.goals.where(complete: false).count >= 1 %>
+		
 			<% @goals.each do |goal| %>
 				<% if goal.complete == false %>
 					<div class="goal-index-desc">
@@ -77,10 +92,15 @@
 					</div>	
 				<% end %>
 			<% end %>
+		<% else %>
+			<p>There are no OKR's</p>	
+		<% end %> 	
 	
 		<div class="new-btn">
 			<%= link_to "New OKR", new_goal_path,  :class => 'waves-effect btn-large' %>
 		</div>
+		
+		<% if @user.goals.where(complete: true).count >= 1 %>
 
 		<h4>Past OKR's</h4>
 			<% @goals.each do |goal| %>
@@ -108,8 +128,11 @@
 					</div>	
 				<% end %>
 			<% end %>
+		<% else %>
+
+		<% end %>	
 
 	</div>
-</div>
+
 
 
