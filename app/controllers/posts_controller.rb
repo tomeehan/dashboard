@@ -27,7 +27,7 @@ class PostsController < ApplicationController
 		@post.type_id = params[:type_id]
 		@types = Type.all.map{ |c| [c.name, c.id] }		
 		if @post.save
-			redirect_to root_path
+			redirect_to posts_path
 		else
 			render 'new'
 		end
