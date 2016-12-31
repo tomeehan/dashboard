@@ -28,6 +28,7 @@ class PostsController < ApplicationController
 		@types = Type.all.map{ |c| [c.name, c.id] }		
 		if @post.save
 			redirect_to posts_path
+			flash[:success] = "Post successfully created"
 		else
 			render 'new'
 		end
@@ -42,7 +43,9 @@ class PostsController < ApplicationController
 		@post.type_id = params[:type_id]
 		@types = Type.all.map{ |c| [c.name, c.id] }
 		if @post.update(post_params)
-			redirect_to post_path(@post) 
+			redirect_to post_path(@post)
+			flash[:notice] = "Post successfully updated"
+
 		else
 			render 'edit'
 		end 

@@ -1,22 +1,36 @@
-<div class="cod-md-6 col-md-offset-3">
+<div class="blue-background">
+	<div class="container">
+		<div class="col-md-4 col-md-offset-4 well signin">
+		  <h2>Sign in</h2>
 
-	<div class="signup-form">
-		<h2>Log in</h2>
+		  <%= simple_form_for(resource, :as => resource_name,
+		                      :url => session_path(resource_name),
+		                      wrapper_mappings: { boolean: :vertical_boolean }) do |f| %>
+		    <%= f.input :email, label: false do %>
+		      <div class="input-group">
+		        <%= f.input_field :email, class: 'form-control input-lg', placeholder: 'Email' %>
+		        <span class="input-group-addon glyphicon glyphicon-user"></span>
+		      </div>
+		    <% end %>
 
-		<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-		  <div class="form-inputs">
-		    <%= f.input :email, required: false, autofocus: true %>
-		    <%= f.input :password, required: false %>
-		    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-		  </div>
+		    <%= f.input :password, label: false do %>
+		      <div class="input-group">
+		        <%= f.input_field :password, class: 'form-control input-lg', placeholder: 'Password' %>
+		        <span class="input-group-addon glyphicon glyphicon-lock"></span>
+		      </div>
+		    <% end %>
 
-		  <div class="form-actions new-btn">
-		    <%= f.button :submit, "Log in", :class => 'waves-effect btn-large' %>
-		  </div>
-		<% end %>
+		    <% if devise_mapping.rememberable? -%>
+		      <%= f.input :remember_me, as: :boolean %>
+		    <% end -%>
 
-		<%= render "devise/shared/links" %>
+		    <%= f.button :submit, "Sign in", class: 'btn-primary btn-block btn-lg' %>
+		  <% end %>
+			
+			<br>
+		  <%= flash_messages layout_flash: false %>
+
+		  <%= render "devise/shared/links" %>
+		</div>
 	</div>
-</div>
-
-
+</div>	
