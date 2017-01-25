@@ -1,29 +1,37 @@
+# GOALS SCHEMA
+    # t.string   "objecive"
+    # t.text     "key_results"
+    # t.date     "deadline"
+    # t.datetime "created_at",  null: false
+    # t.datetime "updated_at",  null: false
+    # t.integer  "user_id"
+    # t.boolean  "complete"
+
+# This class is responsible for managing user goals (in the form of OKR's). 
+
 class GoalsController < ApplicationController
   before_action :set_goal, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit]
 
-  # GET /goals
-  # GET /goals.json
+
   def index
     @goals = Goal.all.order("created_at DESC")
   end
 
-  # GET /goals/1
-  # GET /goals/1.json
+
   def show
   end
 
-  # GET /goals/new
+  
   def new
     @goal = current_user.goals.build
   end
 
-  # GET /goals/1/edit
+
   def edit
   end
 
-  # POST /goals
-  # POST /goals.json
+  
   def create
     @goal = current_user.goals.build(goal_params)
 
@@ -38,8 +46,7 @@ class GoalsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /goals/1
-  # PATCH/PUT /goals/1.json
+  
   def update
     respond_to do |format|
       if @goal.update(goal_params)
@@ -52,8 +59,7 @@ class GoalsController < ApplicationController
     end
   end
 
-  # DELETE /goals/1
-  # DELETE /goals/1.json
+  
   def destroy
     @goal.destroy
     respond_to do |format|
@@ -63,12 +69,11 @@ class GoalsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    
     def set_goal
       @goal = Goal.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def goal_params
       params.require(:goal).permit(:objecive, :key_results, :deadline, :complete)
     end
