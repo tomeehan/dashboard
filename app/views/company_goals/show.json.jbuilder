@@ -1,1 +1,0 @@
-json.partial! "company_goals/company_goal", company_goal: @company_goal
