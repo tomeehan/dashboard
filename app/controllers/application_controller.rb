@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
     before_filter :configure_permitted_parameters, if: :devise_controller?
     before_filter :get_users
 
-
     def get_users
     	@users = User.all.order("created_at DESC")
     end

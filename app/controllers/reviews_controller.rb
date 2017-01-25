@@ -1,3 +1,15 @@
+# REVIEWS SCHEMA:
+#     t.integer  "rating"
+#     t.text     "comment"
+#     t.datetime "created_at", null: false
+#     t.datetime "updated_at", null: false
+#     t.integer  "user_id"
+#     t.integer  "post_id"
+
+# Reviews are comments on posts
+# They're called reviews because this was originally a book review app. That's why reviews also have a ratings attriubte.
+ 
+
 class ReviewsController < ApplicationController
 	before_action :find_post
 	before_action :find_review, only: [:edit, :update, :destroy]
