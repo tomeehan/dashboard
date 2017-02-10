@@ -5,7 +5,7 @@ Minibarra Dashboard is a dashboard for the team at [Minibarra](http://www.miniba
 We post links from great articles/podcasts/books we've read, and share our notes with the team. 
 
 Here it is in production: 
-[https://ancient-savannah-16969.herokuapp.com](https://ancient-savannah-16969.herokuapp.com)
+[https://dashboard.minibarra.com](dashboard.minibarra.com)
 
 You're welcome to sign up, read through, and contribute (as long as it's useful).
 
