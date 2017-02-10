@@ -7,6 +7,8 @@ We post links from great articles/podcasts/books we've read, and share our notes
 Here it is in production: 
 [dashboard.minibarra.com](http://dashboard.minibarra.com)
 
+![Here it is](http://tom-meehan.com/wp-content/uploads/2016/12/Intranet-Demo-Gif.gif)
+
 You're welcome to sign up, read through, and contribute (as long as it's useful).
 
 ***
@@ -43,4 +45,3 @@ Note: Post categories have to be created manually through the Rails console.
 1. `rails console`
 2. `Type.connection`
 3. `Type.create(name: "My Category Name")`
-
