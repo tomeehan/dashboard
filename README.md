@@ -5,7 +5,7 @@ Minibarra Dashboard is a dashboard for the team at [Minibarra](http://www.miniba
 We post links from great articles/podcasts/books we've read, and share our notes with the team. 
 
 Here it is in production: 
-[dashboard.minibarra.com](https://dashboard.minibarra.com)
+[dashboard.minibarra.com](http://dashboard.minibarra.com)
 
 You're welcome to sign up, read through, and contribute (as long as it's useful).
 
