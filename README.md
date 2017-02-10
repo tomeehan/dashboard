@@ -16,6 +16,7 @@ You're welcome to sign up, read through, and contribute (as long as it's useful)
 * Add password recovery.
 * Add email verification.
 * Make mobile friendly.
+* 404, 422, and 500 error pages.
 
 ***
 
