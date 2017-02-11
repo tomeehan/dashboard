@@ -40,7 +40,7 @@ To run the dashboard, run:
 3. `rake db:migrate`
 4. `rails server`
 
-Note: Post categories have to be created manually through the Rails console. 
+Note: Post categories are created manually through the Rails console. 
 
 1. `rails console`
 2. `Type.connection`
