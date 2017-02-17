@@ -5,6 +5,7 @@
 	<%= f.input :title, label: false, placeholder: "Post Title" %>
 	<%= f.input :summary, label: false, placeholder: "Summary" %>
 	<%= f.input :url, label: false, placeholder: "Link" %>
+	<%= f.input :description %>
 	<%= f.input :author, label: false, placeholder: "Author" %>
 </div>	
 
@@ -14,6 +15,6 @@
 
 <% end %>
 
-<%= form_for @post do |f| %>
-  <%= f.simplemde_text_area :description %>
-<% end %>
+<script>
+var simplemde = new SimpleMDE();
+</script>
